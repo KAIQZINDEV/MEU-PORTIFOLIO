@@ -1,0 +1,451 @@
+/* CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: #121214;
+    --card-bg: #1e1e24;
+    --text-color: #ffffff;
+    --text-secondary: #a4a4a4;
+    --primary-color: #00adb5; /* Cor Ciano/Azul tecnológica */
+    --hover-color: #007a80;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* NAVBAR / MENU */
+header {
+    background-color: rgba(18, 18, 20, 0.9);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #29292e;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo span {
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* SEÇÃO HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: radial-gradient(circle, rgba(30,30,36,1) 0%, rgba(12,12,14,1) 100%);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.highlight {
+    color: var(--primary-color);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--hover-color);
+}
+
+/* SEÇÃO SOBRE MIM */
+.about {
+    padding: 100px 20px;
+}
+
+.about h2, .projects-section h2, .contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+@media (max-width: 768px) {
+    .about-grid { grid-template-columns: 1fr; }
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    color: var(--text-secondary);
+}
+
+.skills h3 {
+    margin-bottom: 15px;
+}
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills-tags span {
+    background-color: var(--card-bg);
+    padding: 8px 15px;
+    border-radius: 4px;
+    border: 1px solid #2d2d34;
+}
+
+/* SEÇÃO DE PROJETOS */
+.projects-section {
+    background-color: #16161a;
+    padding: 100px 20px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #29292e;
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-info {
+    padding: 25px;
+}
+
+.project-info h3 {
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.project-tags span {
+    font-size: 0.8rem;
+    background-color: rgba(0, 173, 181, 0.2);
+    color: var(--primary-color);
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+/* CONTATO E RODAPÉ */
+.contact {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.contact p {
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0c0c0e;
+    border-top: 1px solid #29292e;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+
+}
+
+/* APRESENTAÇÂO*/
+.hero {
+    /* --- OUTRAS PROPRIEDADES JÁ EXISTENTES CONTINUAM AQUI --- */
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    /* ...etc... */
+
+    
+    /* Isso cria um gradiente escura (preto com 70% de transparência) ANTES da imagem */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('Apresentação.png');
+    
+}
+
+/* PROJETO */
+
+.projects-section {
+
+/* --- OUTRAS PROPRIEDADES JÁ EXISTENTES CONTINUAM AQUI --- */
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    /* ...etc... */
+
+    
+    /* Isso cria um gradiente escura (preto com 70% de transparência) ANTES da imagem */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('monitor.png');
+}
+
+/* SOBRE MIM */
+.about {
+    min-height: 100vh;
+    padding: 100px 0;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0.75)
+        ),
+        url("sobre.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.about h2 {
+    text-align: center;
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 60px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.about-text {
+    color: #fff;
+    line-height: 1.9;
+    font-size: 1.1rem;
+}
+
+.skills {
+    color: #fff;
+}
+
+.skills h3 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.skills-tags span {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 18px;
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    transition: 0.3s;
+}
+
+.skills-tags span:hover {
+    transform: translateY(-3px);
+    background: rgba(0, 255, 255, 0.2);
+}
+
+.skills-description {
+    line-height: 1.8;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about h2 {
+        font-size: 2.5rem;
+    }
+}
+
+/* =========================
+   CONTATO
+========================= */
+
+.contact {
+    min-height: 100vh;
+    padding: 100px 0;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.85),
+            rgba(0, 0, 0, 0.85)
+        ),
+        url("vamos.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    color: #d1d1d1;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #ffffff;
+
+    padding: 14px 24px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(0, 255, 255, 0.3);
+
+    border-radius: 12px;
+
+    backdrop-filter: blur(5px);
+
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-5px);
+
+    background: rgba(0, 255, 255, 0.15);
+
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+}
+
+.social-links i {
+    margin-right: 8px;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 768px) {
+
+    .contact h2 {
+        font-size: 2.5rem;
+    }
+
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-links a {
+        width: 250px;
+    }
+} 
