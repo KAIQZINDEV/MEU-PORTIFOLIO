@@ -58,7 +58,6 @@ O layout do site utiliza uma paleta de cores moderna com estilo escuro e destaqu
 
 Se você gostou do meu perfil ou quer trocar uma ideia sobre tecnologia e projetos, entre em contato comigo:
 
-* 🐱 **GitHub:** [@KAIQZINDEV](https://github.com/KAIQZINDEV)
 * 💼 **LinkedIn:** [Kaique Dias](https://www.linkedin.com/in/kaique-dias-110593294/)
 * 📧 **E-mail:** [kaique16022007@gmail.com](mailto:kaique16022007@gmail.com)
 
